@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+<link rel="stylesheet" type="text/css" href="alert.css">
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="alert.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#alert").click(function(event) {
+		var alertObj = new doAlert({
+			'id' : "myModal",//模态弹窗的id
+			'title' : '测试',//模态弹窗的标题
+			'message' : '地地道道',//模态弹窗的内容
+			'is_show_head' : 1,//需要模态弹窗的头部：1，不需要模态弹窗的头部：2||不用传这个字段
+			'is_show_content' : 1,//需要模态弹窗的内容：2，不需要模态弹窗的内容：2||不用传这个字段
+			'is_show_foot' : 1,//需要模态弹窗的底部：1，不需要模态弹窗的头部：2||不用传这个字段
+			'auto_destory':1,//需要自动销毁：1，不需要自动销毁：2||不用传这个字段
+			'auto_time':3000,//设置自动销毁时间，秒级
+		});
+	});
+})
+</script>
+</head>
+
+<body style="background:black">
+	<input type="button" value="弹窗" id="alert">
+</body>
+</html>
